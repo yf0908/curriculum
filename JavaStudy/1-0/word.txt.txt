@@ -1,0 +1,148 @@
+■ IT
+IT
+（Information Technology、情報技術）
+一般に、ITはコンピュータとネットワークを利用した技術の総称
+
+ICT
+（Information and Communication Technology＝情報通信科学）
+ITとICTはほとんど同じと考えて良い
+
+IoT
+（Internet of Things）
+今までインターネットに繋がっていなかったモノを繋ぐこと
+
+
+■ OS
+OS
+（Operating System）
+アプリやデバイスを動作させるための基本となるソフトウェア。コンピュータ全体を管理、制御し、人が使えるようにする役割がある
+
+Windows
+マイクロソフト社が開発したOS
+
+macOS (Mac OS X)
+Apple社が開発したOS
+
+UNIX
+OSの一種
+
+Linux
+
+
+
+■ 言語・環境
+マークアップ／フロントエンド
+HTML
+CSS
+JavaScript
+サーバーサイド
+.NET（C#, VB）
+Java
+Java SE
+Java EE（Jakarta EE）
+Perl
+PHP
+Ruby
+■ サーバーソフト
+Apache
+nginx
+IIS
+■ SQL
+SQL
+DB2
+MySQL
+Maria DB
+Oracle DB
+PostgreSQL
+SQLite
+SQL Server
+CRUD
+トランザクション
+コミット
+ロールバック
+排他制御（排他ロック）
+楽観ロック
+悲観ロック
+実行計画
+チューニング
+パフォーマンス
+スロークエリ
+クエリログ
+IDE（統合開発環境）
+Eclipse
+NetBeans
+SpringToolSuite
+DBツール
+A5:SQL Mk-2
+pgAdmin
+DBeaver
+MySQL Workbench
+Sequel Pro
+TeamSQL
+■ 肩書
+PM
+PL
+PG（PE）
+SE
+デザイナー
+エンジニア
+フロントエンド・エンジニア
+サーバーサイド・エンジニア
+バックエンド・エンジニア
+■ UI（ユーザーインターフェース）
+UI
+CUI
+GUI
+■ ファイル／ディレクトリ
+ファイル
+拡張子
+ディレクトリ
+ルート・ディレクトリ
+カレント・ディレクトリ
+パス
+絶対パス
+相対パス
+■ ネットワーク
+LAN
+WAN
+クライアント
+サーバー
+■ 各種プロトコル
+HTTP
+FTP
+HTTPS
+SSL
+SSH
+ポート、ポート番号
+HTTP、FTP、SSHの各ポート番号
+ファイアウォール
+TCP
+■ IPアドレス
+IPアドレス
+グローバルIPアドレス
+プライベートIPアドレス
+■ ドメイン
+ドメイン
+DNS
+VPN
+ブリッジ
+プロキシサーバー
+■ 電子メール
+SMTP
+POP
+IMAP
+■ セッションとクッキー
+セッション
+クッキー
+キャッシュ
+■ DB（データベース）について
+インデックス
+■ テストについて
+フロー
+■ チケット管理ツール
+タスク
+■ バージョン管理
+Git
+SVN
+デグレ
+マージツール
