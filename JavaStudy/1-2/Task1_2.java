@@ -25,7 +25,7 @@ public class Task1_2 {
        */
        // String[] strArray = {"りんご", "もも", "ぶどう"};
        // 宣言と初期化の別々に記述する
-       String[] strArray = new String[3];
+      String[] strArray = new String[3];
       strArray[0] = "りんご";
       strArray[1] = "もも";
       strArray[2] = "ぶどう";
