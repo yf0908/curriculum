@@ -28,11 +28,11 @@ public class Task1_4 {
     // 以下の変数「name（名前）」「pass（パスワード）」を使用して、②〜⑤の条件を満たす処理を記述してください。
     // 名前とパスワードは画面からの入力値だと想定してみましょう。
     String name = "alic";
-    String pass = "pas";
+    String pass = "pass";
     // ② 名前が「 alice 」、パスワードが「 pass 」であった場合、「 ログイン成功です 」と出力してください。
-    // if (name.equals("alice") && pass.equals("pass")) {
-    //   System.out.println(CONST_MSG_SUCCESS);
-    // }
+    if (name.equals("alice") && pass.equals("pass")) {
+      System.out.println(CONST_MSG_SUCCESS);
+    }
 
     // ③ 名前のみ正しい場合、「 パスワードに誤りがあります。 」と出力してください。
     if (name.equals("alice") && name.equals("pass")) {
@@ -40,23 +40,33 @@ public class Task1_4 {
     } else if (name.equals("alice")) {
       System.out.println(CONST_MSG_ERROR_PASS);
     } else {
+      System.out.println();
 
     }
     
     
     // // ④ パスワードのみ正しい場合、「 名前に誤りがあります。 」と出力してください。
-    // if (name.equals("alice") && name.equals("alice")) {
-    //   System.out.println();
-    // } else {
-    //   if (name.equals("pass")) {
-    //     System.out.println(CONST_MSG_ERROR_PASS);
-    //   }
-    // }
+    if (name.equals("alice") && name.equals("pass")) {
+      System.out.println(CONST_MSG_SUCCESS);
+    } else if (name.equals("pass")) {
+      System.out.println(CONST_MSG_ERROR_NAME);
+    } else {
+      System.out.println();
+    }
     
     // // ⑤ 名前もパスワードも間違っていた場合は、「 入力情報に誤りがあります。 」と出力してください。
-    // if (pass.equals("pass") ^ name.equals("alice")) {
-      //   System.out.println(CONST_MSG_ERROR_INPUT);
-      // }
+    if (pass.equals("pass") && name.equals("alice")) {
+      System.out.println(CONST_MSG_SUCCESS);
+    } else if (name.equals("alice")) {
+      System.out.println(CONST_MSG_ERROR_PASS);
+    } else if (name.equals("pass")) {
+      System.out.println(CONST_MSG_ERROR_NAME);
+    } else {
+      System.out.println(CONST_MSG_ERROR_INPUT);
+    }
+
+      
+  
       
   }
 }
