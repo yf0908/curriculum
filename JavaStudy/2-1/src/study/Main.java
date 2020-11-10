@@ -1,5 +1,3 @@
-package study;
-
 /**
  *
  * 本課題では、フィールド変数、メソッドの基本的な使い方を学んでいきましょう。
@@ -14,8 +12,8 @@ public class Main {
 
       //① firstNameとlastNameという名前の変数を定義し、
       //   firstNameには自分の名前、lastNameには自分の名字で初期化しなさい
-        String firstName = "fujita";
-        String lastName = "yuji";
+        final String firstName = "fujita";
+        final String lastName = "yuji";
         
 
         //getName関数の呼び出しと出力
@@ -29,7 +27,6 @@ public class Main {
         for(int i = 0; i < arr.length; i++) {
           isOdd(arr[i]);
         }
-        int arr[i] = num;
 
 
 
@@ -40,8 +37,8 @@ public class Main {
     //  修飾子：public
     //   引数には①で定義したfirstNameとlastNameを引数で受け取り、
     //  last_name と first_name を連結した値を返り値とする変数を定義しなさい。
-    public static void getName(string "firstName", string "lastName") {
-        return "firstName" + "lastName";
+    public static String getName(String firstName, String lastName) {
+        return firstName + lastName;
     }
 
 
