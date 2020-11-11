@@ -3,7 +3,7 @@
 /**
  * Study.java
  */
-class Study {
+class Account {
 
     // フィールド変数
     private String userName;
