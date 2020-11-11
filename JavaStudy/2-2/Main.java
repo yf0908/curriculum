@@ -19,10 +19,7 @@ public class Main {
         Account account = new Account();
 
         // ② ①のインスタンス変数より、アカウント情報をコンソール出力するメソッドを呼び出しなさい。
-    public static String Account() {
-        System.out.println("アカウント情報");
-    }
-
+        account.printAccountInfo();
 
     }
 }
