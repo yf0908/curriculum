@@ -20,13 +20,12 @@ public class Account {
     // ① 以下のルールに従いアカウント情報（名前、ID、パスワード）を出力するメソッドを作成してください。
     // アクセス修飾子:「protected」
     // メソッド名:「printAccountInfo」
-    protected void printAccountInfo(String userName, int id, String password) {
-        System.out.println("ユーザー名は、" + userName);
-        System.out.println("IDは、" + id);
-        System.out.println("パスワードは、" + password);
-    }
+    protected void printAccountInfo() {
+        System.out.println("ユーザー名は、" + userName + "\n"+  "IDは、" + id + "\n" +  "パスワードは、" + password);
 
+    }
 }
+
     /** ===メモ===
     * コンストラクタには以下のルール・特徴がある
     * ・コンストラクタの定義において戻り値の情報は何も記述しない
@@ -37,5 +36,5 @@ public class Account {
     */
 
 /**
- * コンストラクタはメソッドの一種なので、様々な因数パターンに応じてオーバーロードしてい定義することが可能
+ * コンストラクタはメソッドの一種なので、様々な因数パターンに応じてオーバーロードして定義することが可能
  */
