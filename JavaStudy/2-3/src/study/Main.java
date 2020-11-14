@@ -13,9 +13,8 @@ public class Main {
     public static void main(String[] args) {
 
         // ③ Taskクラスのインスタンスを生成し、「doTask()」メソッドを呼び出しなさい。
-        Task num = new Task();
-        num.doTask();
-
+        Task sum = new Task();
+        sum.doTask();
 
     }
 
