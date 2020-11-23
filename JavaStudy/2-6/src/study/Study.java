@@ -25,42 +25,37 @@ public class Study {
         // 問① ローカル変数「now」を使用し、本日の日付を表示してください。
         out.println(now);
 
-
         // Calendarクラスのインスタンスを生成
         Calendar calendar = Calendar.getInstance();
 
         // 問② 「(Calendar.MONTH) + 数値」の処理は、想定していない値となる可能性があります。
         // その理由をコメントへ記述してください。
         // あくまで「月の値 + 1」であるため、年の加算減産は行ってくれない為。
-        System.out.println(calendar.get(Calendar.YEAR));
-        System.out.println(calendar.get(Calendar.MONTH) + 1);
-        System.out.println(calendar.get(Calendar.DATE));
+        out.println(calendar.get(Calendar.YEAR));
+        out.println(calendar.get(Calendar.MONTH) + 1);
+        out.println(calendar.get(Calendar.DATE));
         // 問③ 上記の「calendar」を使用し、本日から1年2ヶ月15日先の日付を表示しなさい。
         // - この課題に関しては課題実施日によって結果が異なりますので、Wiki課題の画像とは結果が異なります。
-        // - また、うるう年の場合は設定内容が正しくとも日付がズレて表示される可能性があります。
+        // - また、うるう年のwww場合は設定内容が正しくとも日付がズレて表示される可能性があります。
         calendar.add(Calendar.YEAR, 1);
-        calendar.add(Calendar.MONTH, 2);
+        calendar.add(Calendar.MONTH, 3);
         calendar.add(Calendar.DATE, 15);
-//        YEAR year = calendar.getTime();
+
         out.println(calendar.get(Calendar.YEAR)
-            + "\n" + calendar.get(Calendar.MONTH) + 1
+            + "\n" + calendar.get(Calendar.MONTH)
             + "\n" + calendar.get(Calendar.DATE));
 
-
-
-
-
+//        out.println(calendar.getTime());
 
         // うるう年判定
         printLeapYear(calendar.get(Calendar.YEAR));
     }
-
     /**
      * うるう年判定
      * 問③で日付がズレる可能性があるため補足として出力
      * @param year
      */
     private static void printLeapYear(final int year) {
-        System.out.println(year + "年は、うるう年" + (Year.isLeap(year) ? "です。" : "ではありません。"));
+        out.println(year + "年は、うるう年" + (Year.isLeap(year) ? "です。" : "ではありません。"));
     }
 }
