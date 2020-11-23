@@ -2,6 +2,7 @@ package check;
 
 import static java.lang.System.*;
 import constants.Constants;
+import check.Pet;
 
 public class Check {
 
@@ -16,10 +17,10 @@ public class Check {
         return firstName + lastName;
     }
 
-    Pet instance1 = new Pet(CHECK_CLASS_JAVA, CHECK_CLASS_HOGE);
+    Pet instance1 = new Pet(Constants.CHECK_CLASS_JAVA, Constants.CHECK_CLASS_HOGE);
         instance1.introduce();
 
-    RobotPet instance2 = new RobotPet(getName(CHECK_CLASS_LUKE), getName(CHECK_CLASS_LUKE));
+    RobotPet instance2 = new RobotPet(Constants.CHECK_CLASS_LUKE, Constants.CHECK_CLASS_LUKE);
         instance2.introduce();
 
 }

@@ -1,10 +1,10 @@
 package check;
 
 public class Pet {
-
+    //フィールド
     private String name;
     private String masterName;
-
+    //コンストラクタ
     public Pet(String name, String masterName) {
         this.name = name;
         this.masterName = masterName;
