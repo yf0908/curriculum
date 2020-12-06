@@ -30,27 +30,32 @@ body {
     height: 250px;
 }
 
-.right_up_center {
-    background-color: #dbd400;
-    width: 150px;
-    height: 50px;
-}
-.right_mid_center {
-    background-color: #0093b7;
-    width: 150px;
-    height: 100px;
-}
-.right_bot_center {
-    background-color: #8c2727;
-    width: 250px;
-    height: 100px;
-}
 .right {
     background-color: #ff9e6b;
     float: right;
     width: 100px;
     height: 150px;
 }
+.right_up_center {
+    background-color: #dbd400;
+    float: right;
+    width: 150px;
+    height: 50px;
+}
+.right_mid_center {
+    background-color: #0093b7;
+    float: right;
+    width: 150px;
+    height: 100px;
+}
+
+.right_bottom {
+    background-color: #8c2727;
+    float: right;
+    width: 250px;
+    height: 100px;
+}
+
 
 .footer {
     background-color: #d98d30;
