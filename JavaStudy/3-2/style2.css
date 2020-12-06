@@ -3,7 +3,6 @@
 body {
     width: 100%;
     min-height: 100%;
-    height: 100px;
 }
 .clearfix::after { 
     content: ''; 
@@ -13,7 +12,7 @@ body {
 .wrapper {
     width: 400px;
     height: 450px;
-    /* margin: 0 auto; */
+    margin: 0 auto;
 }
 .header {
     background-color: #141f40;
@@ -21,7 +20,8 @@ body {
     height: 100px;
 }
 .contents { 
-    height: 250px;
+    width: 100%;
+    min-height: 100%;
 }
 .left {
     background-color: #80bfa8;
@@ -42,7 +42,7 @@ body {
     width: 150px;
     height: 50px;
 }
-.right_mid_center {
+.right_down_center {
     background-color: #0093b7;
     float: right;
     width: 150px;
@@ -61,10 +61,39 @@ body {
     background-color: #d98d30;
     width: 400px;
     height: 100px;
-    clear: both;
 }
 * {
     margin: 0;
     padding: 0;
 }
 /*floatはrightかleftのみ指定できる
+
+/*medium screen*/
+@media (max-width: 767px) {
+    .wrapper {
+        width:300px;
+    }
+    .right {
+        width: 75px;
+    }
+    .lift {
+        width: 100px;
+    }
+    .right_up_center, .right_down_center {
+        width: 125px;
+    }
+    .right_bottom {
+        width: 200px;
+    }
+    }
+    
+    /*small screen*/
+    @media (max-width: 479px) {
+    .wrapper {
+        width:150px;
+    }
+    .left, .right, .right_up_center, .right_down_center, .right_bottom {
+        float: none;
+        width: 150px;
+    }
+    }
