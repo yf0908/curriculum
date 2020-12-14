@@ -31,6 +31,7 @@
 }
 .rect_frame {
     width: 160px;
+    margin: 0;
     position: relative;
     top: 10px;
     right: 30px;
