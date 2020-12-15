@@ -36,6 +36,7 @@ body {
     width: 250px;
     height: 250px;
     float: left;
+    position: relative;
 }
 .box {
     background-color: #a9004b;
@@ -62,19 +63,13 @@ body {
     width: 140px;
     height: 40px;
     margin: 0 0 10px 0 ;
-    padding: 0;
 }
 .rect_frame {
     width: 150px;
-    margin: 0;
-    position: relative;
     height: 170px;
-    top: 20px;
+    position: absolute; /*親要素に依存*/
     left: 40px;
-}
-.contents {
-    margin-left: auto;
-    margin-right: auto;
+    top: 40px;
 }
 
 /* reset.css*/
