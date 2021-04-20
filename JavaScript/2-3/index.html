@@ -34,7 +34,7 @@
         const omikuji = ["大吉", "中吉", "凶"];
         
         //②乱数を発生させて、その値を取得
-        let random = Math.floor(Math.random() * 3); //小数点以下の端数を切り捨てるメソッド
+        let random = Math.floor(Math.random() * omikuji.length); //小数点以下の端数を切り捨てるメソッド
         
         //③取得した **btn** の「クリック」という文字を配列の中身の文字にランダムに変化させる
         btn.textContent = omikuji[random] ;        
