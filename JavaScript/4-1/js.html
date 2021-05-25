@@ -1,0 +1,39 @@
+li<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ToDo</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="app">
+        <span class="info">残タスク数：{{ remaining }}/{{ list.length }}</span><br>
+        <input type="text" v-model="addText" placeholder="ToDoを入力して">
+        <button v-on:click="addToDo()">追加</button>
+        <button v-on:click="deleteBtn()">削除</button><br>
+        <input type="text" v-model="keyword" placeholder="キーワードを入力して">
+        <ul>
+            <li v-for="list in filteredList" :key="list.todo">
+                <span v-text=data.list></span>
+            </li>
+        </ul>
+        <hr>
+        <ul v-for="todo in list" >
+            <!-- main.js のlistを index.html の <ul v-for="todo in list"> で受け取り、1件づつ todo の中に入れる。 -->
+            <li >
+                <span v-bind:class="{ done: todo.isChecked }">
+                <!-- todoのisCheckedがtrueの場合doneクラスを付与 -->
+                    <input type="checkbox" v-model="todo.isChecked">{{ todo.text }}
+                </span>
+            </li>
+        </ul>
+        <ul v-show="!list.length">現在タスクはありません</ul>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.12/dist/vue.js"></script>
+    <script src="js/main.js"></script>
+    
+</body>
+</html>

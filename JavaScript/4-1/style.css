@@ -1,0 +1,14 @@
+/* .done {
+    text-decoration: line-through;
+} */
+
+.info {
+    color: gray;
+    font-size: 12px;
+    font-weight: nomal;
+}
+
+#app li > span.done {
+    text-decoration: line-through;
+    color: gray;
+}
