@@ -8,32 +8,53 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div id="app">
-        <span class="info">残タスク数：{{ remaining }}/{{ list.length }}</span><br>
+    <div id="app">  <!-- id="app"がついているところが適応される -->
+        <span class="info"> 残タスク数：{{ remaining }}/{{ list.length }} </span>
+        <br>
+
         <input type="text" v-model="addText" placeholder="ToDoを入力して">
-        <button v-on:click="addToDo()">追加</button>
-        <button v-on:click="deleteBtn()">削除</button><br>
+        <!-- inputタグにv-model="○○" とすると、このinputタグに入力された値が○○に紐付く -->
+        <!-- v-modelを利用してVue.js側でデータが更新されるようにする -->
+        <button v-on:click="addToDo()"> 追加 </button>
+        <button v-on:click="deleteBtn()"> 削除 </button>
+        <br>
+        <!-- v-modelの設定を行うことでbuttonタグの、v-onディレクティブに設定している各関数の処理を起動することができる -->
+        <!-- v-onディレクティブでクリックされた時にイベント発火 -->
+
         <input type="text" v-model="keyword" placeholder="キーワードを入力して">
-        <ul>
-            <li v-for="list in filteredList" :key="list.todo">
-                <span v-text=data.list></span>
-            </li>
-        </ul>
-        <hr>
+        <!-- v-modelでdataのkeywordを指定することで、Vue.js側でデータ(keywordの値)の更新が行われるようにする -->
+        <hr>  
+        <div v-if="keyword !== '' ">
+            <!-- 検索処理の分岐作成 条件によって表示と非表示を切り替え （v-if="変数"  v-if="条件式"） -->
+            <ul v-for="list in filteredList">
+                <li>
+                    <span v-bind:class=" { done: list.isChecked } ">
+                        <input type="checkbox" v-model="list.isChecked"> {{ list.text }}
+                    </span>
+                </li>
+            </ul>
+        </div>
+        <div v-else>
+            <!-- 通常のToDoリスト表示 -->
+        </div>
+        
         <ul v-for="todo in list" >
             <!-- main.js のlistを index.html の <ul v-for="todo in list"> で受け取り、1件づつ todo の中に入れる。 -->
-            <li >
+            <li>
                 <span v-bind:class="{ done: todo.isChecked }">
-                <!-- todoのisCheckedがtrueの場合doneクラスを付与 -->
-                    <input type="checkbox" v-model="todo.isChecked">{{ todo.text }}
+                    <!-- v-bind:class にオブジェクトを渡すことでクラスを動的に切り替えることができる -->
+                    <!-- todoのisCheckedがtrueの場合doneクラスを付与 CSS用-->
+                    <input type="checkbox" v-model="todo.isChecked"> {{ todo.text }}
+                    <!-- {{ todo.text }}とすることでVue.jsからリストに格納されているtextを表示 -->
                 </span>
             </li>
         </ul>
-        <ul v-show="!list.length">現在タスクはありません</ul>
+        <div v-show="!list.length">現在タスクはありません</div>
     </div>
 
     <script src="https://cdn.jsdelivr.net/npm/vue@2.6.12/dist/vue.js"></script>
-    <script src="js/main.js"></script>
+    <script src="main.js"></script>  <!-- pathは間違えないように注意する -->
+    <!-- divの下にmain.js -->
     
 </body>
 </html>
