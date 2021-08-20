@@ -39,6 +39,18 @@ var app = new Vue({  //予め用意されている、「Vue」というクラス
             this.list = this.list.filter(function(todo) {
                 return !todo.isChecked;
             });
+        },
+        
+        filteredList: function() {  //検索するロジック
+            var filtered = [];
+            for (var i in this.list) {
+                var adding_task = this.list[i];
+                var text = this.addText
+                if (adding_task.text.indexOf(this.keyword) !== -1) { //ヒットしなかった場合
+                    filtered.push(adding_task)
+                } 
+            }
+            return filtered;
         }
     },
     // filterの基本的な記述は以下のように記述
@@ -56,17 +68,9 @@ var app = new Vue({  //予め用意されている、「Vue」というクラス
         },
 
 
-        filteredList: function() {  //検索するロジック
-            var filtered = [];
-            for (var i in this.list) {
-                var filtered = this.list[i];
-                // var text = this.addText
-                if (this.list.indexOf(this.keyword) !== -1) { //ヒットしなかった場合
-                //indexOfの引数で指定したものが中にない場合は「-1」が返ってくる
-                    filtered.push(filtered)
-                } 
-            }
-            return filtered;
+
+        filteredLists: function () {
+            return this.filteredList();
         }
         // ①for-in文を使い、dataに定義されているlist配列の中身を取り出す
         // ②通常のToDoリストの中身と、ToDo入力欄の値を各変数に代入し、if文で検索にかける
@@ -78,9 +82,11 @@ var app = new Vue({  //予め用意されている、「Vue」というクラス
         // 実行する文;
         // 文字列.indexOf( 検索したい文字[, 検索開始位置]) 検索開始位置は省略可
 
-        //※メソッドを使用すると関係ない箇所で画面に描画が入ることや、見た目では処理が動作しなくても裏で処理が動作するなど無駄に読み込みが遅くなるため使用しない
+        //indexOfの引数で指定したものが中にない場合は「-1」が返ってくる
 
+        //配列.push(追加したい値) 配列の末尾に追加
         
+
 
     }
 });

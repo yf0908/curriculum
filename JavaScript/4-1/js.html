@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="ja">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,8 +8,10 @@
     <title>ToDo</title>
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
-    <div id="app">  <!-- id="app"がついているところが適応される -->
+    <div id="app">
+        <!-- id="app"がついているところが適応される -->
         <span class="info"> 残タスク数：{{ remaining }}/{{ list.length }} </span>
         <br>
 
@@ -26,7 +29,7 @@
         <hr>  
         <div v-if="keyword !== '' ">
             <!-- 検索処理の分岐作成 条件によって表示と非表示を切り替え （v-if="変数"  v-if="条件式"） -->
-            <ul v-for="list in filteredList">
+            <ul v-for="list in filteredLists">
                 <li>
                     <span v-bind:class=" { done: list.isChecked } ">
                         <input type="checkbox" v-model="list.isChecked"> {{ list.text }}
@@ -36,20 +39,20 @@
         </div>
         <div v-else>
             <!-- 通常のToDoリスト表示 -->
-        </div>
         
-        <ul v-for="todo in list" >
-            <!-- main.js のlistを index.html の <ul v-for="todo in list"> で受け取り、1件づつ todo の中に入れる。 -->
-            <li>
-                <span v-bind:class="{ done: todo.isChecked }">
-                    <!-- v-bind:class にオブジェクトを渡すことでクラスを動的に切り替えることができる -->
-                    <!-- todoのisCheckedがtrueの場合doneクラスを付与 CSS用-->
-                    <input type="checkbox" v-model="todo.isChecked"> {{ todo.text }}
-                    <!-- {{ todo.text }}とすることでVue.jsからリストに格納されているtextを表示 -->
-                </span>
-            </li>
-        </ul>
-        <div v-show="!list.length">現在タスクはありません</div>
+            <ul v-for="todo in list" >
+                <!-- main.js のlistを index.html の <ul v-for="todo in list"> で受け取り、1件づつ todo の中に入れる。 -->
+                <li>
+                    <span v-bind:class="{ done: todo.isChecked }">
+                        <!-- v-bind:class にオブジェクトを渡すことでクラスを動的に切り替えることができる -->
+                        <!-- todoのisCheckedがtrueの場合doneクラスを付与 CSS用-->
+                        <input type="checkbox" v-model="todo.isChecked"> {{ todo.text }}
+                        <!-- {{ todo.text }}とすることでVue.jsからリストに格納されているtextを表示 -->
+                    </span>
+                </li>
+            </ul>
+            <div v-show="!list.length">現在タスクはありません</div>
+        </div>
     </div>
 
     <script src="https://cdn.jsdelivr.net/npm/vue@2.6.12/dist/vue.js"></script>
@@ -58,4 +61,3 @@
     
 </body>
 </html>
-
